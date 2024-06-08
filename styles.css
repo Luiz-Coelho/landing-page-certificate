@@ -1,0 +1,316 @@
+/* VARIABLES */
+
+:root {
+  --prymary-color: hsl(179, 74%, 37%);
+  --secondary-color: hsl(207, 96%, 11%);
+  --neutral-color: hsl(187, 19%, 66%);
+}
+
+/* START OF CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background: linear-gradient(var(--prymary-color), var(--secondary-color));
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/*END OF CSS RESET*/
+
+#header,
+main,
+#footer {
+  padding: 1rem;
+}
+
+#header,
+main {
+  margin-bottom: 1rem;
+}
+
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2vw;
+  background-color: var(--prymary-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#header-img {
+  width: 3.5rem;
+  min-width: 56px;
+}
+
+#header ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+}
+
+#header ul li {
+  font-size: 1.325rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover {
+  transition: 0.5s;
+  color: white;
+}
+
+main {
+  display: grid;
+  row-gap: 4rem;
+}
+
+main section {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+}
+
+iframe {
+  margin-inline: auto;
+  max-width: 560px;
+  width: 80vw;
+  max-height: 315px;
+}
+
+.features article {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.features p {
+  max-width: 90ch;
+}
+
+.features-logos {
+  width: 2.5rem;
+  fill: #dddddd;
+}
+
+.pricing-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.price-card {
+  min-width: 200px;
+  width: 80vw;
+  max-width: 300px;
+  background-color: #eeeeee;
+  border-radius: 6px;
+  border: 2px solid black;
+}
+
+.price-card h3 {
+  background-color: #aaaaaa;
+  text-transform: uppercase;
+  text-align: center;
+  padding-block: 0.5rem;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.price-card p {
+  padding: 1rem;
+}
+
+.newsletter article {
+  display: grid;
+  place-items: center;
+  row-gap: 1rem;
+}
+
+#form {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+}
+
+#email {
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 100vw;
+}
+
+#submit {
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 100vw;
+  background-color: #eed6af;
+}
+
+#submit:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: coral;
+  color: black;
+}
+
+#footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  background-color: #eed6af;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#footer-img {
+  width: 5rem;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  justify-content: space-evenly;
+}
+
+.social-logo {
+  width: 2rem;
+}
+
+.social-logo:hover {
+  width: 2.2rem;
+}
+
+.contact-copyright {
+  display: grid;
+  place-items: center;
+  row-gap: 1rem;
+  font-weight: bold;
+}
+
+.contact-copyright ul {
+  display: flex;
+  list-style: none;
+  column-gap: 1rem;
+}
+
+.contact-copyright a {
+  text-decoration: none;
+}
+
+.contact-copyright a:hover {
+  color: goldenrod;
+  transition: 0.5s;
+}
+
+@media (max-width: 870px) {
+  #footer {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .features article {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .features article div {
+    margin-bottom: 1rem;
+  }
+
+  .features article div h2 {
+    margin-bottom: 1rem;
+  }
+}
